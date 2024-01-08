@@ -10,4 +10,7 @@ def create_app():
     # Registrar blueprints
     app.register_blueprint(main_bp)
 
+    # Registrar rotas
+    from . import routes  # Importa as rotas definidas em routes.py
+
     return app
