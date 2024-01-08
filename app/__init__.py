@@ -1,6 +1,13 @@
-# myproject/app/__init__.py
 from flask import Flask
+from .views.main import main_bp
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__)
+    
+    # Configurações do aplicativo
+    app.config.from_pyfile('config.py')
 
-from . import routes
+    # Registrar blueprints
+    app.register_blueprint(main_bp)
+
+    return app
