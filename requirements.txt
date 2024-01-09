@@ -9,3 +9,7 @@ pytest==6.2.4  # Substitua pelo número da versão que você quer usar
 flask-testing==0.8.1  # Substitua pelo número da versão que você quer usar
 psycopg2-binary
 Flask-SQLAlchemy
+Flask-Login
+Flask-Security
+
+
