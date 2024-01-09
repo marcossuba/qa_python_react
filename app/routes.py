@@ -7,9 +7,10 @@ app = Flask(__name__)
 def home():
     return jsonify({"message": "Welcome to the QA Site Backend!"})
 
-@app.route('/')
+@app.route('/about')
 def about():
-    return "Aqui vai alguma informação sobre o site ou aplicativo."
+    return "Aqui vai alguma informação sobre o site ou aplicativo.", 200
 
 if __name__ == '__main__':
     app.run(debug=True)
+
