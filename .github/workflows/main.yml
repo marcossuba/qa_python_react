@@ -1,7 +1,5 @@
 name: Flask Advanced CI/CD
 
-name: Flask Advanced CI/CD
-
 on:
   push:
     branches: [ main ]
