@@ -47,8 +47,9 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pip install pytest
-        pytest
+       pip install pytest
+       pytest tests/  # Substitua com o caminho correto, se necessário
+
 
   deploy:
     needs: build-and-test
@@ -69,5 +70,9 @@ jobs:
 
     - name: Basic Deployment Step
       run: |
-        # Adicione aqui os comandos necessários para implantar seu aplicativo
-        echo "Deploying to server..."
+        # Comandos para deploy, como SCP, SSH, scripts de deploy, etc.
+
+      env:
+        SOME_SECRET: ${{ secrets.SOME_SECRET }}
+        
+
