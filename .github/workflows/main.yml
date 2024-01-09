@@ -25,10 +25,15 @@ jobs:
     - name: Cache Python dependencies
       uses: actions/cache@v2
       with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        path: |
+          ~/.cache/pip
+          ~/Library/Caches/pip
+          %LocalAppData%\pip\Cache
+        key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
-          ${{ runner.os }}-pip-
+         ${{ runner.os }}-python-${{ matrix.python-version }}-
+         ${{ runner.os }}-python-
+         ${{ runner.os }}-
 
     - name: Install dependencies
       run: |
