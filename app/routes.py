@@ -1,22 +1,29 @@
-# myproject/app/routes.py
+"""
+Este módulo define as rotas para a aplicação Flask.
+"""
+
 from flask import Flask, jsonify
-from flask import Blueprint
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def home():
+    """
+    Rota para a página inicial que retorna uma mensagem de boas-vindas.
+    """
     return jsonify({"message": "Welcome to the QA Site Backend!"})
+
 
 @app.route('/about')
 def about():
+    """
+    Rota que fornece informações sobre o site ou aplicativo.
+    """
     return "Aqui vai alguma informação sobre o site ou aplicativo.", 200
+
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-main = Blueprint('main', __name__)
-
-@main.route('/')
-def home():
-    return "Página Inicial"
+# Nova linha no final do arquivo
