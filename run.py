@@ -1,6 +1,9 @@
+"""
+Este módulo inicializa e executa a aplicação Flask.
+"""
 from app import create_app
 
 app = create_app()
 
 if __name__ == "__main__":
-    app.run(debug=True, port=4000)  # Defina a porta desejada aqui
+    app.run(debug=True, port=4000)
