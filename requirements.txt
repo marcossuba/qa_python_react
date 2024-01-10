@@ -5,11 +5,10 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 MarkupSafe==2.1.3
 Werkzeug==3.0.1
-pytest==6.2.4  # Substitua pelo número da versão que você quer usar
-flask-testing==0.8.1  # Substitua pelo número da versão que você quer usar
+pytest==6.2.4
+flask-testing==0.8.1
 psycopg2-binary
 Flask-SQLAlchemy
 Flask-Login
-Flask-Security
-
-
+Flask-WTF==1.0.0  # Adicione a versão mais recente do Flask-WTF
+PyJWT==2.4.0  # Adicione a versão mais recente do PyJWT

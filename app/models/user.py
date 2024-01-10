@@ -3,7 +3,6 @@
 from ..db import db
 
 
-
 class User(db.Model):  # [too-few-public-methods]
     """Modelo de usuário para autenticação. Contém identificador, nome de usuário e hash de senha."""
 
