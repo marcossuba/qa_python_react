@@ -1,9 +1,9 @@
 """Módulo que define o modelo de usuário para o banco de dados."""
 
-from app import db
+from ..db import db
 
 
-class User(db.Model):
+class User(db.Model):  # [too-few-public-methods]
     """Modelo de usuário para autenticação. Contém identificador, nome de usuário e hash de senha."""
 
     id = db.Column(db.Integer, primary_key=True)
